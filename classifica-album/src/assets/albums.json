@@ -44,6 +44,15 @@
     "nascosto": false,
     "tracce": 5
   },
+    {
+    "artista": "Fashion Forty",
+    "titolo": "Limitless",
+    "mese": 1,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 13
+  },
   {
     "artista": "Pyrex",
     "titolo": "King Of Dark",
