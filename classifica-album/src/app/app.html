@@ -8,25 +8,27 @@
         <span class="logo-rap">RAP</span>
         <span class="logo-year">2026</span>
       </div>
-      <p class="header-subtitle">Tutto il rap italiano &middot; Anno 2026</p>
+      <p class="header-subtitle">Classifiche rap italiana &middot; Anno 2026</p>
     </div>
     <div class="header-noise"></div>
   </header>
 
+  <!-- CHI SIAMO / ABOUT -->
+  <div class="about-bar">
+    <span class="about-icon">ℹ️</span>
+    <p class="about-text">
+      Le classifiche sono stilate da <strong>Gropuzzo</strong> e <strong>Casari</strong> al primo ascolto dell'uscita.
+      Il voto <em>Complessivo</em> è la media dei due giudizi.
+      <!-- modifica questo testo liberamente -->
+    </p>
+  </div>
+
   <!-- NAV TABS -->
   <nav class="tab-nav">
-    <button
-      class="tab-btn"
-      [class.active]="sezioneAttiva === 'annuale'"
-      (click)="selezionaSezione('annuale')"
-    >
+    <button class="tab-btn" [class.active]="sezioneAttiva === 'annuale'" (click)="selezionaSezione('annuale')">
       Classifica Annuale
     </button>
-    <button
-      class="tab-btn"
-      [class.active]="sezioneAttiva === 'mensile'"
-      (click)="selezionaSezione('mensile')"
-    >
+    <button class="tab-btn" [class.active]="sezioneAttiva === 'mensile'" (click)="selezionaSezione('mensile')">
       Classifica Mensile
     </button>
   </nav>
@@ -37,29 +39,44 @@
     <section *ngIf="sezioneAttiva === 'annuale'" class="sezione">
       <div class="sezione-header">
         <h2 class="sezione-title">Top Album 2026</h2>
-        <span class="sezione-count">{{ classificaAnnuale.length }} album</span>
+        <span class="sezione-count">{{ classificaAnnualeFiltrata.length }} album</span>
       </div>
 
+      <!-- disclaimer EP annuale -->
+      <div class="ep-disclaimer" *ngIf="epNascostiAnnuale > 0">
+        <span class="ep-disclaimer-text">
+          {{ epNascostiAnnuale }} album con 7 o meno tracce
+          {{ mostraEpAnnuale ? 'inclusi' : 'esclusi' }} per la classifica generale.
+        </span>
+        <button class="ep-toggle" [class.active]="mostraEpAnnuale" (click)="mostraEpAnnuale = !mostraEpAnnuale">
+          <span class="ep-toggle-box">{{ mostraEpAnnuale ? '✓' : '' }}</span>
+          Mostra tutto
+        </button>
+      </div>
+      <div class="scroll-hint">
+        <span class="scroll-hint-label">Scorri per il podio</span>
+        <div class="scroll-hint-arrow"></div>
+      </div>
       <app-podio [albums]="podioPrimi"></app-podio>
+      <!-- dopo <app-podio [albums]="podioPrimi"> nella sezione annuale -->
+      <div class="scroll-hint">
+        <span class="scroll-hint-label">Scorri per la classifica completa</span>
+        <div class="scroll-hint-arrow"></div>
+      </div>
 
-      <div class="divider">
+      <div class="divider" *ngIf="listaResto.length > 0">
         <span class="divider-label">TUTTI GLI ALBUM</span>
       </div>
 
-      <app-lista [albums]="listaResto" [offset]="3"></app-lista>
+      <app-lista *ngIf="listaResto.length > 0" [albums]="listaResto" [offset]="3"></app-lista>
     </section>
 
     <!-- ===== SEZIONE MENSILE ===== -->
     <section *ngIf="sezioneAttiva === 'mensile'" class="sezione">
 
-      <!-- Selettore mese -->
       <div class="mesi-nav">
-        <button
-          *ngFor="let m of mesiDisponibili"
-          class="mese-btn"
-          [class.active]="meseSelezionato === m"
-          (click)="caricaMese(m)"
-        >
+        <button *ngFor="let m of mesiDisponibili" class="mese-btn" [class.active]="meseSelezionato === m"
+          (click)="caricaMese(m)">
           {{ MESI[m] }}
         </button>
       </div>
@@ -67,16 +84,37 @@
       <div *ngIf="meseSelezionato !== null">
         <div class="sezione-header">
           <h2 class="sezione-title">{{ MESI[meseSelezionato] }}</h2>
-          <span class="sezione-count">{{ albumsMeseSelezionato.length }} album</span>
+          <span class="sezione-count">{{ albumsMenseFiltrati.length }} album</span>
         </div>
 
+        <!-- disclaimer EP mensile -->
+        <div class="ep-disclaimer" *ngIf="epNascostiMensile > 0">
+          <span class="ep-disclaimer-text">
+            {{ epNascostiMensile }} album con 4 o meno tracce
+            {{ mostraEpMensile ? 'inclusi' : 'esclusi' }} per questo mese.
+          </span>
+          <button class="ep-toggle" [class.active]="mostraEpMensile" (click)="mostraEpMensile = !mostraEpMensile">
+            <span class="ep-toggle-box">{{ mostraEpMensile ? '✓' : '' }}</span>
+            Mostra tutto
+          </button>
+        </div>
+
+        <div class="scroll-hint">
+          <span class="scroll-hint-label">Scorri per il podio</span>
+          <div class="scroll-hint-arrow"></div>
+        </div>
         <app-podio [albums]="podioPrimiMese"></app-podio>
+        <!-- dopo <app-podio [albums]="podioPrimiMese"> nella sezione mensile -->
+        <div class="scroll-hint">
+          <span class="scroll-hint-label">Scorri per la classifica completa</span>
+          <div class="scroll-hint-arrow"></div>
+        </div>
 
         <div class="divider" *ngIf="listaRestoMese.length > 0">
           <span class="divider-label">ALTRI ALBUM</span>
         </div>
 
-        <app-lista [albums]="listaRestoMese" [offset]="3"></app-lista>
+        <app-lista *ngIf="listaRestoMese.length > 0" [albums]="listaRestoMese" [offset]="3"></app-lista>
       </div>
 
     </section>
@@ -85,7 +123,7 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <span>ITRap2026 · uso personale · aggiornato manualmente</span>
+    <span>ITRap2026 &middot; uso personale &middot; aggiornato manualmente</span>
   </footer>
 
 </div>

@@ -20,6 +20,12 @@ export class AppComponent implements OnInit {
   sezioneAttiva: 'mensile' | 'annuale' = 'annuale';
   MESI = MESI;
 
+  // filtri
+  mostraEpAnnuale = false;
+  mostraEpMensile = false;
+  readonly SOGLIA_ANNUALE = 7;
+  readonly SOGLIA_MENSILE = 4;
+
   constructor(
     private albumsService: AlbumsService,
     private cdr: ChangeDetectorRef
@@ -67,8 +73,31 @@ export class AppComponent implements OnInit {
     return this.albumiPerMese[this.meseSelezionato] ?? [];
   }
 
-  get podioPrimi(): Album[] { return this.classificaAnnuale.slice(0, 3); }
-  get listaResto(): Album[] { return this.classificaAnnuale.slice(3); }
-  get podioPrimiMese(): Album[] { return this.albumsMeseSelezionato.slice(0, 3); }
-  get listaRestoMese(): Album[] { return this.albumsMeseSelezionato.slice(3); }
+  // annuale: filtra EP (<=7 tracce) se non attivato
+  get classificaAnnualeFiltrata(): Album[] {
+    if (this.mostraEpAnnuale) return this.classificaAnnuale;
+    return this.classificaAnnuale.filter(a => a.tracce > this.SOGLIA_ANNUALE);
+  }
+
+  get podioPrimi(): Album[] { return this.classificaAnnualeFiltrata.slice(0, 3); }
+  get listaResto(): Album[] { return this.classificaAnnualeFiltrata.slice(3); }
+
+  // mensile: filtra EP (<=4 tracce) se non attivato
+  get albumsMenseFiltrati(): Album[] {
+    if (this.mostraEpMensile) return this.albumsMeseSelezionato;
+    return this.albumsMeseSelezionato.filter(a => a.tracce > this.SOGLIA_MENSILE);
+  }
+
+  get podioPrimiMese(): Album[] { return this.albumsMenseFiltrati.slice(0, 3); }
+  get listaRestoMese(): Album[] { return this.albumsMenseFiltrati.slice(3); }
+
+  get epNascostiAnnuale(): number {
+    return this.classificaAnnuale.filter(a => a.tracce <= this.SOGLIA_ANNUALE).length;
+  }
+
+  get epNascostiMensile(): number {
+    return this.albumsMeseSelezionato.filter(a => a.tracce <= this.SOGLIA_MENSILE).length;
+  }
+
+  
 }
