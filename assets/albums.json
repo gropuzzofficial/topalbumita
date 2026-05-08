@@ -1,0 +1,308 @@
+[
+  {
+    "artista": "Gue & Cooking Soul",
+    "titolo": "Fastlife 5",
+    "mese": 1,
+    "voto": 8.13,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Kid Yugi",
+    "titolo": "Anche Gli Eroi Muoiono",
+    "mese": 1,
+    "voto": 8.12,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Tony Boy",
+    "titolo": "Trauma",
+    "mese": 1,
+    "voto": 6.3,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Slings",
+    "titolo": "Too Clean (Deluxe)",
+    "mese": 1,
+    "voto": 5.5,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Niky Savage",
+    "titolo": "Trapper (Deluxe)",
+    "mese": 1,
+    "voto": 5.44,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Pyrex",
+    "titolo": "King Of Dark",
+    "mese": 2,
+    "voto": 7.21,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Melons & Sick Luke",
+    "titolo": "Shaytan",
+    "mese": 2,
+    "voto": 7.07,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Lacrim",
+    "titolo": "Cipriani",
+    "mese": 2,
+    "voto": 6.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Dbz",
+    "titolo": "Citofono",
+    "mese": 2,
+    "voto": 5.89,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Capo Plaza",
+    "titolo": "4U Ep",
+    "mese": 2,
+    "voto": 5.61,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Kuremino",
+    "titolo": "Best (Deluxe)",
+    "mese": 2,
+    "voto": 4.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Macello",
+    "titolo": "Pensieri Cattivi",
+    "mese": 2,
+    "voto": 3.8,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Low-Red & Ilovethisbeat",
+    "titolo": "Mario Iii",
+    "mese": 2,
+    "voto": 3.23,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Nabi",
+    "titolo": "Diamante",
+    "mese": 2,
+    "voto": 2.7,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Vacca & Inoki",
+    "titolo": "Fondazione Strada",
+    "mese": 2,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  },
+  {
+    "artista": "Disme",
+    "titolo": "Minacce",
+    "mese": 3,
+    "voto": 6.62,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Nayt",
+    "titolo": "Io Individuo",
+    "mese": 3,
+    "voto": 4.36,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Marte",
+    "titolo": "Metamorfosi",
+    "mese": 3,
+    "voto": 3.91,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Promessa",
+    "titolo": "Morendo Ad Occhi Aperti",
+    "mese": 3,
+    "voto": 3.83,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Tony Effe & Side Baby",
+    "titolo": "Crack Musica Ii",
+    "mese": 3,
+    "voto": 3.39,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Vt3Sor",
+    "titolo": "Vaz Tè",
+    "mese": 3,
+    "voto": 3.14,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Aira",
+    "titolo": "Crash Out",
+    "mese": 3,
+    "voto": 2.88,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Niko Pandetta",
+    "titolo": "Malavita",
+    "mese": 3,
+    "voto": 2.88,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Axos",
+    "titolo": "Mitridate 2",
+    "mese": 3,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  },
+  {
+    "artista": "Salmo",
+    "titolo": "Hellvisback 10 Years Later",
+    "mese": 4,
+    "voto": 4.42,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Shiva",
+    "titolo": "Vangelo",
+    "mese": 4,
+    "voto": 4.06,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Rame",
+    "titolo": "Opera D'Arte",
+    "mese": 4,
+    "voto": 3.61,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Sadturs & Kiid",
+    "titolo": "No Regular Music 2.5 (Deluxe)",
+    "mese": 4,
+    "voto": 3.17,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": false,
+    "tracce": 0
+  },
+  {
+    "artista": "Myto",
+    "titolo": "Genesi",
+    "mese": 4,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  },
+  {
+    "artista": "Over Lapa",
+    "titolo": "Mattone",
+    "mese": 4,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  },
+  {
+    "artista": "Lil Yamme",
+    "titolo": "In Studio Con Yamme Vol. 1",
+    "mese": 4,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  },
+  {
+    "artista": "Brokebusterziko",
+    "titolo": "3Fecta",
+    "mese": 4,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  },
+  {
+    "artista": "Juli",
+    "titolo": "Solito Cinema",
+    "mese": 4,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  },
+  {
+    "artista": "Nerissima Serpe",
+    "titolo": "Nerissima",
+    "mese": 5,
+    "voto": 0.0,
+    "copertina": "assets/covers/placeholder.png",
+    "nascosto": true,
+    "tracce": 0
+  }
+]
