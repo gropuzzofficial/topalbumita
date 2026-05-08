@@ -1,0 +1,54 @@
+<div class="podio-wrapper">
+  <div class="podio">
+
+    <!-- 2° posto -->
+    <div class="podio-slot secondo" *ngIf="secondo">
+      <div class="rank-badge">2</div>
+      <div class="cover-frame">
+        <img [src]="secondo.copertina" [alt]="secondo.titolo" class="cover-img"
+             onerror="this.src='assets/covers/placeholder.png'">
+        <div class="cover-glow secondo-glow"></div>
+      </div>
+      <div class="album-info">
+        <span class="artista">{{ secondo.artista }}</span>
+        <span class="titolo">{{ secondo.titolo }}</span>
+        <span class="voto">{{ getVotoLabel(secondo.voto) }}</span>
+      </div>
+      <div class="podio-bar bar-2"></div>
+    </div>
+
+    <!-- 1° posto -->
+    <div class="podio-slot primo" *ngIf="primo">
+      <div class="crown">👑</div>
+      <div class="rank-badge">1</div>
+      <div class="cover-frame">
+        <img [src]="primo.copertina" [alt]="primo.titolo" class="cover-img"
+             onerror="this.src='assets/covers/placeholder.png'">
+        <div class="cover-glow primo-glow"></div>
+      </div>
+      <div class="album-info">
+        <span class="artista">{{ primo.artista }}</span>
+        <span class="titolo">{{ primo.titolo }}</span>
+        <span class="voto">{{ getVotoLabel(primo.voto) }}</span>
+      </div>
+      <div class="podio-bar bar-1"></div>
+    </div>
+
+    <!-- 3° posto -->
+    <div class="podio-slot terzo" *ngIf="terzo">
+      <div class="rank-badge">3</div>
+      <div class="cover-frame">
+        <img [src]="terzo.copertina" [alt]="terzo.titolo" class="cover-img"
+             onerror="this.src='assets/covers/placeholder.png'">
+        <div class="cover-glow terzo-glow"></div>
+      </div>
+      <div class="album-info">
+        <span class="artista">{{ terzo.artista }}</span>
+        <span class="titolo">{{ terzo.titolo }}</span>
+        <span class="voto">{{ getVotoLabel(terzo.voto) }}</span>
+      </div>
+      <div class="podio-bar bar-3"></div>
+    </div>
+
+  </div>
+</div>

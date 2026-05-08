@@ -1,0 +1,91 @@
+<div class="app-wrapper">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-it">IT</span>
+        <span class="logo-rap">RAP</span>
+        <span class="logo-year">2026</span>
+      </div>
+      <p class="header-subtitle">Tutto il rap italiano &middot; Anno 2026</p>
+    </div>
+    <div class="header-noise"></div>
+  </header>
+
+  <!-- NAV TABS -->
+  <nav class="tab-nav">
+    <button
+      class="tab-btn"
+      [class.active]="sezioneAttiva === 'annuale'"
+      (click)="selezionaSezione('annuale')"
+    >
+      Classifica Annuale
+    </button>
+    <button
+      class="tab-btn"
+      [class.active]="sezioneAttiva === 'mensile'"
+      (click)="selezionaSezione('mensile')"
+    >
+      Classifica Mensile
+    </button>
+  </nav>
+
+  <main class="main-content">
+
+    <!-- ===== SEZIONE ANNUALE ===== -->
+    <section *ngIf="sezioneAttiva === 'annuale'" class="sezione">
+      <div class="sezione-header">
+        <h2 class="sezione-title">Top Album 2026</h2>
+        <span class="sezione-count">{{ classificaAnnuale.length }} album</span>
+      </div>
+
+      <app-podio [albums]="podioPrimi"></app-podio>
+
+      <div class="divider">
+        <span class="divider-label">TUTTI GLI ALBUM</span>
+      </div>
+
+      <app-lista [albums]="listaResto" [offset]="3"></app-lista>
+    </section>
+
+    <!-- ===== SEZIONE MENSILE ===== -->
+    <section *ngIf="sezioneAttiva === 'mensile'" class="sezione">
+
+      <!-- Selettore mese -->
+      <div class="mesi-nav">
+        <button
+          *ngFor="let m of mesiDisponibili"
+          class="mese-btn"
+          [class.active]="meseSelezionato === m"
+          (click)="caricaMese(m)"
+        >
+          {{ MESI[m] }}
+        </button>
+      </div>
+
+      <div *ngIf="meseSelezionato !== null">
+        <div class="sezione-header">
+          <h2 class="sezione-title">{{ MESI[meseSelezionato] }}</h2>
+          <span class="sezione-count">{{ albumsMeseSelezionato.length }} album</span>
+        </div>
+
+        <app-podio [albums]="podioPrimiMese"></app-podio>
+
+        <div class="divider" *ngIf="listaRestoMese.length > 0">
+          <span class="divider-label">ALTRI ALBUM</span>
+        </div>
+
+        <app-lista [albums]="listaRestoMese" [offset]="3"></app-lista>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span>ITRap2026 · uso personale · aggiornato manualmente</span>
+  </footer>
+
+</div>

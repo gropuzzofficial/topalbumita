@@ -1,0 +1,27 @@
+<div class="lista">
+  <div
+    class="lista-row"
+    *ngFor="let album of albums; let i = index"
+    [style.animation-delay]="(i * 0.05) + 's'"
+  >
+    <span class="rank">#{{ i + 1 + offset }}</span>
+    <img
+      [src]="album.copertina"
+      [alt]="album.titolo"
+      class="mini-cover"
+      onerror="this.src='assets/covers/placeholder.png'"
+    />
+    <div class="info">
+      <span class="artista">{{ album.artista }}</span>
+      <span class="titolo">{{ album.titolo }}</span>
+      <span class="tracce">{{ album.tracce }} tracce</span>
+    </div>
+    <div class="voto-pill" [ngClass]="getVotoClass(album.voto)">
+      {{ getVotoLabel(album.voto) }}
+    </div>
+  </div>
+
+  <div class="lista-empty" *ngIf="albums.length === 0">
+    <span>Nessun album in classifica.</span>
+  </div>
+</div>
