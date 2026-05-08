@@ -63,7 +63,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/itrap2026/"
+            "baseHref": "/topalbumita/"
           }
         }
       }
